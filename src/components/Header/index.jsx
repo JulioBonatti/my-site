@@ -1,4 +1,5 @@
 import React from 'react';
+import HeaderButton from '../HeaderButton';
 import './styles.css';
 
 const Header = () => {
@@ -7,10 +8,10 @@ const Header = () => {
             <div className='tiny-block right'/>
             <div className='small-block right'/>
             <div className='midle-block'>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#play">Play</a>
+                <HeaderButton text="Home" refId="#home"/>
+                <HeaderButton text="About" refId="#about"/> 
+                <HeaderButton text="Skills" refId="#skills"/>
+                <HeaderButton text="Play" refId="#play"/>   
             </div>
             <div className='small-block'/>
             <div className='tiny-block'/>

@@ -24,7 +24,7 @@
     margin: 5px 7px 0 7px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .small-block, .tiny-block {

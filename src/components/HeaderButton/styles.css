@@ -1,0 +1,39 @@
+.julios-h-button {
+    height: 100%;
+    width: 63px;
+    background-color: #444444;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.julios-h-icons {
+    color: #c0c0c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.julios-h-button-indication {
+    height: 14px;
+    width: 14px;
+    /* border: 1px solid rgb(39, 174, 95); */
+    background-color: #383838;
+    clip-path: polygon(0% 100%, 50% 60%, 100% 100%);
+}
+
+.julios-h-icons a {
+    text-decoration: none;
+    color: rgb(44, 207, 112);
+    font-family: bahnschrift;
+}
+
+.julios-h-icons a[href="#home"]:target,
+.julios-h-icons a[href="#bout"]:target,
+.julios-h-icons a[href="#skills"]:target,
+.julios-h-icons a[href="#play"]:target {
+    box-shadow: rgba(39, 174, 95, 0.33) 0 0 12px;
+    background-color: red;
+}
