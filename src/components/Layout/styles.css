@@ -2,4 +2,5 @@
     margin-top: 70px;
     display: grid;
     grid-template-columns: 1fr;
+    height: calc(100vh - 70px);
 }

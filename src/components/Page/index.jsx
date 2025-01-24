@@ -1,8 +1,39 @@
 import Layout from "../Layout";
 import BaseRow from "../BaseRow";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 function Page() {
+  const [activeSection, setActiveSection] = useState("");
+
+  const observerCallBack = entries => {
+    console.log("Entries: ", entries)
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  }
+
+  const options = {
+    root: document.querySelector(".julios-main-container"),
+    rootMargin: "0px",
+    threshold: 0.8,
+  };
+  
+  useEffect(() => {
+    const sections = document.querySelectorAll(".julios-base_row");
+    let obs = []
+    sections.forEach((section,i) => {
+      obs[i] = new IntersectionObserver(
+        observerCallBack,
+        options // Adjust threshold as needed
+      );
+      obs[i].observe(section);
+    })
+    console.log("Sections: ", sections)
+  }, []);
+
   return (
     <Layout>
       <BaseRow id="home">
