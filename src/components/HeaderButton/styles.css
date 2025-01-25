@@ -22,6 +22,11 @@
     /* border: 1px solid rgb(39, 174, 95); */
     background-color: #383838;
     clip-path: polygon(0% 100%, 50% 60%, 100% 100%);
+    transition: all 0.4s ease-in-out;
+}
+
+.julios-h-button-indication[aria-current="true"] {
+    background-color: rgb(39, 174, 95);
 }
 
 .julios-h-icons a {

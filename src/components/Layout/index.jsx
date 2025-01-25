@@ -2,10 +2,10 @@ import React from 'react';
 import Header from '../Header';
 import './styles.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ activeButtons, children }) => {
     return (
         <>
-            <Header />
+            <Header activeButtons={activeButtons}/>
             <div className='julios-main-container'>
                 {children}
             </div>
