@@ -6,6 +6,7 @@ import "./styles.css";
 
 function Page() {
   const [activeSections, setActiveSections] = useState([]);
+  const [scrollPercentage, setScrollPercentage] = useState(0.0);
 
   const observerCallBack = entries => {
     console.log("Entries: ", entries);
@@ -17,6 +18,16 @@ function Page() {
     });
     setActiveSections(activeSections);
   }
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+
+    const scrolled = (scrollTop / (scrollHeight - clientHeight));
+    console.log("Scrolled: ", scrolled);
+    setScrollPercentage(scrolled);
+};
 
   const options = {
     root: document.querySelector(".julios-main-container"),
@@ -32,14 +43,18 @@ function Page() {
     );
     sections.forEach((section) => observer.observe(section));
     console.log("Sections: ", sections)
+
+    window.addEventListener("scroll", handleScroll);
+    
     return () => {
       observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <Layout activeButtons={activeSections}>
-      <Minimap />
+      <Minimap percent={scrollPercentage} />
       <BaseRow id="home">
         <h1 style={{height: "40rem"}}>Home section</h1>
       </BaseRow>
