@@ -1,6 +1,7 @@
 import Layout from "../Layout";
 import BaseRow from "../BaseRow";
 import Minimap from "../MiniMap";
+import Game from "../Game";
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
@@ -65,7 +66,8 @@ function Page() {
         <h1 style={{height: "40rem"}}>Skills section</h1>
       </BaseRow>
       <BaseRow id="play">
-        <h1 style={{height: "40rem"}}>Play section</h1>
+        <h1>Play section</h1>
+        <Game />
       </BaseRow>
     </Layout>
   );
