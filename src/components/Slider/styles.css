@@ -1,0 +1,58 @@
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider-title {
+    color: rgb(39, 174, 95);
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.slider-footer {
+    color: rgb(39, 174, 95);
+    font-family: monospace;
+    font-size: 15px;
+    margin-left: auto;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+    background: rgba(39, 174, 95, 0.5);
+    height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    margin-top: -12px; /* Centers thumb on the track */
+    border: 1px solid rgb(39, 174, 95);
+    background-color: rgba(39, 174, 95, 0.2);
+    height: 2rem;
+    width: 1rem;    
+}
+
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    background: rgba(39, 174, 95, 0.5);
+    height: 0.5rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 0; 
+    border: 1px solid rgb(39, 174, 95);
+    background-color: rgba(39, 174, 95, 0.2);
+    height: 2rem;
+    width: 1rem;
+}

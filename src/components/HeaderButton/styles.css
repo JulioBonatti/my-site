@@ -40,5 +40,4 @@
 .julios-h-icons a[href="#skills"]:target,
 .julios-h-icons a[href="#play"]:target {
     box-shadow: rgba(39, 174, 95, 0.33) 0 0 12px;
-    background-color: red;
 }
