@@ -15,6 +15,7 @@
     font-family: monospace;
     font-size: 15px;
     margin-left: auto;
+    height: 15px;
 }
 
 input[type="range"] {

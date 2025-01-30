@@ -1,6 +1,6 @@
 import "./styles.css";
 import BoxPhisics from "./utils.js";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Slider from "../Slider/index.jsx";
 
 function Game({ active }) {
@@ -112,7 +112,7 @@ function Game({ active }) {
                     min={1}
                     max={10}
                     value={boxMass}
-                    footerText={"This is heavy!"}
+                    textList={[{text: "Light like a dust", value: 1}, {text: "This is heavy!", value: 10}]}
                 />
                 <Slider
                     title="Gravity"
@@ -120,7 +120,7 @@ function Game({ active }) {
                     min={1}
                     max={50}
                     value={gravity}
-                    footerText={"This is a crazy planet..."}
+                    textList={[{text: "Play with the planet gravity", value: 1}]}
                 />
                 <Slider
                     title="Atack Power"
@@ -128,7 +128,7 @@ function Game({ active }) {
                     min={1}
                     max={3000}
                     value={force}
-                    footerText={"This can be powerfull."}
+                    textList={[{text: "Weak...", value: 1}, {text: "This can be powerfull.", value: 3000}]}
                 />
             </div>
         </div >
