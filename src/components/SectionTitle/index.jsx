@@ -1,9 +1,9 @@
 import "./styles.css";
 
-function SectionTitle({ style, title }) {
+function SectionTitle({ style, children }) {
     return (
             <div className="julios-section-title-container">
-                <div className="julios-section-title" style={{ style }}>{title}</div>
+                <div className="julios-section-title" style={{ style }}>{children}</div>
             </div>
     );
 }

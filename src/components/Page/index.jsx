@@ -1,6 +1,7 @@
 import Layout from "../Layout";
 import BaseRow from "../BaseRow";
 import Minimap from "../MiniMap";
+import SectionTitle from "../SectionTitle";
 import Game from "../Game";
 import React, { useEffect, useState } from "react";
 import "./styles.css";
@@ -28,14 +29,14 @@ function Page() {
     const scrolled = (scrollTop / (scrollHeight - clientHeight));
     console.log("Scrolled: ", scrolled);
     setScrollPercentage(scrolled);
-};
+  };
 
   const options = {
     root: document.querySelector(".julios-main-container"),
     rootMargin: "10px 0px 10px 0px",
     threshold: 1.0,
   };
-  
+
   useEffect(() => {
     const sections = document.querySelectorAll(".julios-base_row");
     const observer = new IntersectionObserver(
@@ -46,7 +47,7 @@ function Page() {
     console.log("Sections: ", sections)
 
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
@@ -57,13 +58,15 @@ function Page() {
     <Layout activeButtons={activeSections}>
       <Minimap percent={scrollPercentage} />
       <BaseRow id="home">
-        <h1 style={{height: "40rem"}}>Home section</h1>
+        <SectionTitle>Home</SectionTitle>
+        <h1 style={{ height: "40rem" }}>Home section</h1>
       </BaseRow>
       <BaseRow id="about">
-        <h1 style={{height: "40rem"}}>About section</h1>
+        <SectionTitle>About</SectionTitle>
+        <h1 style={{ height: "40rem" }}>About section</h1>
       </BaseRow>
       <BaseRow id="skills">
-        <h1 style={{height: "40rem"}}>Skills section</h1>
+        <h1 style={{ height: "40rem" }}>Skills section</h1>
       </BaseRow>
       <BaseRow id="play">
         <h1>Play section</h1>
