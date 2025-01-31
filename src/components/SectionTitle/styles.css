@@ -1,0 +1,14 @@
+
+.julios-section-title-container {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    width: calc(fit-content + 4vw);
+    border-bottom: 1px solid rgb(39, 174, 95);    
+}
+
+.julios-section-title {
+    margin-right: 2vw;
+    border-bottom: 1px solid rgb(39, 174, 95);
+    font-family: bahnschrift;
+}
