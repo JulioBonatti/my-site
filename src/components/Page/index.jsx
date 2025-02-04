@@ -2,6 +2,7 @@ import Layout from "../Layout";
 import BaseRow from "../BaseRow";
 import Minimap from "../MiniMap";
 import SectionTitle from "../SectionTitle";
+import HomeSection from "../HomeSection";
 import Game from "../Game";
 import React, { useEffect, useState } from "react";
 import "./styles.css";
@@ -59,7 +60,10 @@ function Page() {
       <Minimap percent={scrollPercentage} />
       <BaseRow id="home">
         <SectionTitle>Home</SectionTitle>
-        <h1 style={{ height: "40rem" }}>Home section</h1>
+        <HomeSection
+          title="Hi, I'm Julio" 
+          subtitle="A fullstack developer" 
+        />
       </BaseRow>
       <BaseRow id="about">
         <SectionTitle>About</SectionTitle>
