@@ -3,6 +3,7 @@ import BaseRow from "../BaseRow";
 import Minimap from "../MiniMap";
 import SectionTitle from "../SectionTitle";
 import HomeSection from "../HomeSection";
+import AboutSection from "../AboutSection";
 import Game from "../Game";
 import React, { useEffect, useState } from "react";
 import "./styles.css";
@@ -10,6 +11,12 @@ import "./styles.css";
 function Page() {
   const [activeSections, setActiveSections] = useState([]);
   const [scrollPercentage, setScrollPercentage] = useState(0.0);
+
+  const subtitles = [
+    "A fullstack developer",
+    "A creative engineer",
+    "An art enthusiast",
+  ];
 
   const observerCallBack = entries => {
     console.log("Entries: ", entries);
@@ -61,13 +68,14 @@ function Page() {
       <BaseRow id="home">
         <SectionTitle>Home</SectionTitle>
         <HomeSection
-          title="Hi, I'm Julio" 
-          subtitle="A fullstack developer" 
+          title="Hi, I'm Julio"
+          subtitles={subtitles}
         />
       </BaseRow>
       <BaseRow id="about">
         <SectionTitle>About</SectionTitle>
-        <h1 style={{ height: "40rem" }}>About section</h1>
+        <AboutSection />
+        <h1 style={{ height: "35rem" }}>About section</h1>
       </BaseRow>
       <BaseRow id="skills">
         <h1 style={{ height: "40rem" }}>Skills section</h1>

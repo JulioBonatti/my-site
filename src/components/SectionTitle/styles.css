@@ -11,6 +11,11 @@
 .julios-section-title {
     margin-right: 1vw;
     border-bottom: 1px solid rgb(39, 174, 95);
+    transition: all 0.2s ease-in-out;
     font-family: bahnschrift;
     font-size: 40px;    
+}
+
+.julios-section-title:hover {
+    margin-right: 1.3vw;
 }
