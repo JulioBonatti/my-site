@@ -60,7 +60,7 @@ function Game({ active }) {
             const result = box.calculateResultant();
             console.log(`xPos: ${result.xPos.toFixed(2)}, yPos: ${result.yPos.toFixed(2)}`);
 
-            setBoxXPos(result.xPos);
+            setBoxXPos(result.xPos); // TODO: transform coodenates into object no separated variables
             setBoxyPos(result.yPos);
 
             if (result.endScene) {
